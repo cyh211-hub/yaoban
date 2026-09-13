@@ -2,14 +2,14 @@
 
 <img src="media/遥伴-正式品牌标识.png" alt="遥伴" width="160">
 
-# 遥伴 Yaoban
+# 遥伴 Yovolpen
 
 让已适配的普通蓝牙遥控器成为 Mac 的语音与快捷操作入口。
 面向桌面智能体、AI 编程与日常办公。
 
 **产品开发中 · 测试版准备中**
 
-国内访问更快的 Gitee 镜像：[gitee.com/cyh830211/yaoban](https://gitee.com/cyh830211/yaoban)
+国内访问更快的 Gitee 镜像：[gitee.com/cyh830211/yovolpen](https://gitee.com/cyh830211/yovolpen)
 
 </div>
 
@@ -79,7 +79,7 @@ Apple Siri Remote 自身麦克风的完整链路为：
 
 欢迎在 Issue 中反馈问题或提出建议。提交时请附上：macOS 版本、Mac 芯片、遥控器准确型号、遥伴版本、复现步骤与实际结果；上传日志或截图前，请先删除个人信息、设备地址与语音内容。
 
-首条反馈帖：[你希望遥伴帮你省掉哪一步操作？](https://github.com/cyh211-hub/yaoban/issues)
+首条反馈帖：[你希望遥伴帮你省掉哪一步操作？](https://github.com/cyh211-hub/yovolpen/issues)
 
 ## 开源协议
 
