@@ -1,0 +1,37 @@
+name: 功能建议
+description: 描述你希望遥伴解决的真实使用问题
+title: "[建议] "
+labels: ["功能建议"]
+body:
+  - type: dropdown
+    id: scene
+    attributes:
+      label: 使用场景
+      options:
+        - 桌面智能体／AI 编程
+        - 文档写作
+        - PPT 制作与汇报
+        - 阅读与日常办公
+        - AI 眼镜概念场景
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 现在最麻烦的一步
+      description: 先描述问题，不必先设计解决方案。
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 希望怎样操作
+      placeholder: 例如：长按某键开始表达，松开后回到原窗口。
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 设备与软件环境
+      placeholder: 遥控器型号、macOS 版本、目标应用
