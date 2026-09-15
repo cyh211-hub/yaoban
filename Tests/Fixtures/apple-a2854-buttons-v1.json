@@ -1,0 +1,247 @@
+{
+  "provenance": "Real A2854 USB-C hardware, passive IOHID value capture on 2026-09-12; identity removed. Power deliberately untested. No touch or audio content.",
+  "vendorID": 76,
+  "productID": 789,
+  "events": [
+    {
+      "at": 8.286,
+      "interface": 1,
+      "cookie": 11,
+      "page": 12,
+      "usage": 128,
+      "reportID": 251,
+      "value": 1,
+      "expectedButton": "center"
+    },
+    {
+      "at": 8.459,
+      "interface": 1,
+      "cookie": 11,
+      "page": 12,
+      "usage": 128,
+      "reportID": 251,
+      "value": 0,
+      "expectedButton": "center"
+    },
+    {
+      "at": 14.468,
+      "interface": 1,
+      "cookie": 17,
+      "page": 12,
+      "usage": 66,
+      "reportID": 251,
+      "value": 1,
+      "expectedButton": "up"
+    },
+    {
+      "at": 14.639,
+      "interface": 1,
+      "cookie": 17,
+      "page": 12,
+      "usage": 66,
+      "reportID": 251,
+      "value": 0,
+      "expectedButton": "up"
+    },
+    {
+      "at": 17.646,
+      "interface": 1,
+      "cookie": 19,
+      "page": 12,
+      "usage": 67,
+      "reportID": 251,
+      "value": 1,
+      "expectedButton": "down"
+    },
+    {
+      "at": 17.773,
+      "interface": 1,
+      "cookie": 19,
+      "page": 12,
+      "usage": 67,
+      "reportID": 251,
+      "value": 0,
+      "expectedButton": "down"
+    },
+    {
+      "at": 19.402,
+      "interface": 1,
+      "cookie": 20,
+      "page": 12,
+      "usage": 68,
+      "reportID": 251,
+      "value": 1,
+      "expectedButton": "left"
+    },
+    {
+      "at": 19.529,
+      "interface": 1,
+      "cookie": 20,
+      "page": 12,
+      "usage": 68,
+      "reportID": 251,
+      "value": 0,
+      "expectedButton": "left"
+    },
+    {
+      "at": 20.613,
+      "interface": 1,
+      "cookie": 18,
+      "page": 12,
+      "usage": 69,
+      "reportID": 251,
+      "value": 1,
+      "expectedButton": "right"
+    },
+    {
+      "at": 20.744,
+      "interface": 1,
+      "cookie": 18,
+      "page": 12,
+      "usage": 69,
+      "reportID": 251,
+      "value": 0,
+      "expectedButton": "right"
+    },
+    {
+      "at": 21.905,
+      "interface": 1,
+      "cookie": 14,
+      "page": 1,
+      "usage": 134,
+      "reportID": 251,
+      "value": 1,
+      "expectedButton": "back"
+    },
+    {
+      "at": 22.032,
+      "interface": 1,
+      "cookie": 14,
+      "page": 1,
+      "usage": 134,
+      "reportID": 251,
+      "value": 0,
+      "expectedButton": "back"
+    },
+    {
+      "at": 25.249,
+      "interface": 1,
+      "cookie": 8,
+      "page": 12,
+      "usage": 96,
+      "reportID": 251,
+      "value": 1,
+      "expectedButton": "tv"
+    },
+    {
+      "at": 25.392,
+      "interface": 1,
+      "cookie": 8,
+      "page": 12,
+      "usage": 96,
+      "reportID": 251,
+      "value": 0,
+      "expectedButton": "tv"
+    },
+    {
+      "at": 26.765,
+      "interface": 1,
+      "cookie": 16,
+      "page": 12,
+      "usage": 205,
+      "reportID": 251,
+      "value": 1,
+      "expectedButton": "playPause"
+    },
+    {
+      "at": 26.907,
+      "interface": 1,
+      "cookie": 16,
+      "page": 12,
+      "usage": 205,
+      "reportID": 251,
+      "value": 0,
+      "expectedButton": "playPause"
+    },
+    {
+      "at": 28.519,
+      "interface": 1,
+      "cookie": 15,
+      "page": 12,
+      "usage": 226,
+      "reportID": 251,
+      "value": 1,
+      "expectedButton": "mute"
+    },
+    {
+      "at": 28.647,
+      "interface": 1,
+      "cookie": 15,
+      "page": 12,
+      "usage": 226,
+      "reportID": 251,
+      "value": 0,
+      "expectedButton": "mute"
+    },
+    {
+      "at": 30.95,
+      "interface": 1,
+      "cookie": 9,
+      "page": 12,
+      "usage": 233,
+      "reportID": 251,
+      "value": 1,
+      "expectedButton": "volumeUp"
+    },
+    {
+      "at": 31.107,
+      "interface": 1,
+      "cookie": 9,
+      "page": 12,
+      "usage": 233,
+      "reportID": 251,
+      "value": 0,
+      "expectedButton": "volumeUp"
+    },
+    {
+      "at": 31.984,
+      "interface": 1,
+      "cookie": 10,
+      "page": 12,
+      "usage": 234,
+      "reportID": 251,
+      "value": 1,
+      "expectedButton": "volumeDown"
+    },
+    {
+      "at": 32.112,
+      "interface": 1,
+      "cookie": 10,
+      "page": 12,
+      "usage": 234,
+      "reportID": 251,
+      "value": 0,
+      "expectedButton": "volumeDown"
+    },
+    {
+      "at": 33.408,
+      "interface": 1,
+      "cookie": 13,
+      "page": 12,
+      "usage": 4,
+      "reportID": 251,
+      "value": 1,
+      "expectedButton": "siri"
+    },
+    {
+      "at": 34.859,
+      "interface": 1,
+      "cookie": 13,
+      "page": 12,
+      "usage": 4,
+      "reportID": 251,
+      "value": 0,
+      "expectedButton": "siri"
+    }
+  ]
+}

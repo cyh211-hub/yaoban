@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+target='/Library/Audio/Plug-Ins/HAL/MiRemoteMic.driver'
+if [ -L "$target" ]; then echo '拒绝移除符号链接目标。' >&2; exit 1; fi
+if [ -e "$target" ]; then
+    identifier=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$target/Contents/Info.plist")
+    if [ "$identifier" != 'local.moss.MiRemoteMic' ]; then echo '目标不是本项目的麦克风组件，未移除。' >&2; exit 1; fi
+    /bin/rm -rf "$target"
+fi
+/usr/sbin/pkgutil --forget local.moss.MiRemoteMic.install >/dev/null 2>&1 || true
+/usr/bin/killall coreaudiod || true
+exit 0

@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+/usr/bin/codesign --verify --strict '/Library/Audio/Plug-Ins/HAL/MiRemoteMic.driver'
+# Let launchd restart CoreAudio and enumerate the newly installed HAL bundle.
+/usr/bin/killall coreaudiod || true
+exit 0
