@@ -128,3 +128,9 @@ Yovolpen 安装包不包含 PacketLogger。未安装时仍可安装和使用按�
 [下载测试版](https://github.com/cyh211-hub/yovolpen/releases/tag/v0.10.8) · [查看安装指南](https://github.com/cyh211-hub/yovolpen/blob/main/docs/PUBLIC_INSTALL.md) · [分享你的想法](https://github.com/cyh211-hub/yovolpen/issues)
 
 </div>
+
+## 支持遥伴开源项目
+
+我是遥伴 Yovolpen 的开发者，已在[爱发电开设项目支持主页](https://afdian.com/a/yovolpen)。如果遥伴对你有帮助，欢迎自愿支持。
+
+选择 1 个月即可支持 10 元，无需连续赞助。支持优先用于首年 Apple Developer Program 会员费用及后续签名、公证工作。软件继续按 GPL-3.0 开源，未赞助也能下载使用。项目进度与收支汇总将公开，署名致谢自愿。
