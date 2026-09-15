@@ -1,0 +1,13 @@
+.build/
+build/
+release/
+.DS_Store
+__pycache__/
+*.pyc
+*.log
+*.wav
+*.caf
+*.pcap
+*.pcapng
+*.hci
+*.pkg
