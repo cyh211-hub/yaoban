@@ -1,19 +1,39 @@
-# Third-party attribution
+# 遥伴 Yovolpen：开源许可与来源
 
-This local development prototype includes `ATVVProtocol.swift` from [Open Voice Bridge](https://github.com/nijez/open-voice-bridge), by its contributors, under GNU GPL version 3. A copy of the upstream license is provided in `LICENSE`. The copied protocol file is unmodified. The HID wire format and ATVV handshake in the new diagnostic implementation were checked against that project's `RemoteButtons.swift` and `XiaomiBluetoothBridge.swift`.
+更新：2026-09-15；对应 0.10.8 公开测试候选。
 
-Reference sources were retrieved on 2026-09-08. The observed upstream main revision during retrieval was `1796b149f752ff2d2fa82fd818f8a5a2bc60802a`. `Reference/open-voice-bridge` retains the fetched reference files. No upstream app, updater, installer or install script is executed by this project.
+本项目按 GNU GPL version 3 分发，完整文本见 `LICENSE`。发布安装包须同时提供对应版本的源码与构建脚本。各第三方组件保留其原有版权与许可；品牌名称用于说明来源或兼容关系，不表示合作或背书。
 
-The new diagnostic application, UI, local WAV capture and build script were added on 2026-09-08. The earlier OK toggle was removed after the user clarified physical down/up semantics. Current defaults map the native microphone key to right Command and OK to Return.
+## Open Voice Bridge
 
-Device-specific mapping and restoration were informed by Open Voice Bridge's `RemoteVoiceFunctionMapper.swift` and Apple's [TN2450](https://developer.apple.com/library/archive/technotes/tn2450/_index.html). New code adds a persisted restoration journal, editable mappings and a chord lifecycle state machine.
+来源：https://github.com/nijez/open-voice-bridge
+参考版本：`1796b149f752ff2d2fa82fd818f8a5a2bc60802a`；作者为该项目贡献者；GPL-3.0。
 
-This combined prototype is provided under GNU GPL version 3, with its corresponding source and build instructions, without warranty. It is a local prototype, not an official Xiaomi, Doubao or OpenAI application.
+`Sources/MiRemoteLab/ATVVProtocol.swift` 与取得的上游文件逐字节一致。小米 HID 格式、ATVV 握手及按键恢复方案参考该项目 RemoteButtons、XiaomiBluetoothBridge、RemoteVoiceFunctionMapper。其余本项目实现及修改按项目 GPL-3.0 许可提供。上游许可保留于 `Assets/Licenses/OpenVoiceBridge-GPL-3.0`。
 
-The system microphone component is built from [BlackHole](https://github.com/ExistentialAudio/BlackHole), by Existential Audio and contributors, under GPL version 3. The vendored revision is `e2b22aaaba4e507a097131704bf96dabc004d9cf` (v0.7.1). Original source and license are retained under `Vendor/BlackHole`. Our build supplies unique device names, UIDs, plug-in factory identity, a 48 kHz input/hidden-output configuration, and patches the generated build copy to report USB transport for input-method compatibility. The original vendored C source remains unchanged. See `Vendor/BlackHole/UPSTREAM.md` for details. The locally authored installer and uninstaller only manage `MiRemoteMic.driver`; no upstream installation scripts are executed.
+## BlackHole
 
-Version 0.2.0 adds menu-bar operation, per-mode settings and verified persistent storage. Fresh defaults map OK to left Control + Return and Power to Return, while preserving right Command for the native microphone key. Existing user settings migrate separately from these defaults.
+来源：https://github.com/ExistentialAudio/BlackHole
+版本：v0.7.1，`e2b22aaaba4e507a097131704bf96dabc004d9cf`。
+版权：Existential Audio Inc. 与贡献者；GPL-3.0。
 
-Version 0.5.0 uses the original Xiaomi Bluetooth Remote 2 Pro product thumbnail from the official product catalogue (product 23714), retrieved 2026-09-09. See `Assets/Devices/SOURCE.md`. The manufacturer image and trademarks retain their original rights and are not covered by the source-code licence. The Yovolpen brand mark was generated for this project from the user-selected design.
+完整单文件驱动源及许可位于 `Vendor/BlackHole`。本项目通过 `Driver/DriverConfig.h` 设置独立设备名称、UID、工厂标识和 48 kHz 音频格式。`scripts/build-audio-driver.py` 生成工作副本，将传输类型改报 USB 以兼容输入法，原有 vendored C 文件不修改。它仍是虚拟麦克风，不是物理 USB 麦克风。该兼容方案参考 https://github.com/HD838A/remote-mic-app 的 `c9fabd1ef53e1a311dab4518a70693494631368b`。安装只管理本项目 MiRemoteMic.driver。
 
-Version 0.9.0's local Apple voice preview statically links libopus 1.6.1, under its BSD-style license; the complete notice is included at `Assets/Licenses/Opus-COPYING` and in the application's resources. The addressed PacketLogger / Opus workflow and first-use warm-up were studied in SiriRemoteForge revision `4c65969c71c5` (GPL-3.0), retained under `Reference/SiriRemoteForge-4c65969c71c5`. Yovolpen's parser, bounded capture broker, source checks and lifecycle integration are in this repository under GPL-3.0. Apple's PacketLogger remains proprietary: this local installer only copies and verifies the user's already-installed Apple tool; it does not redistribute it.
+## Opus
+
+来源：https://opus-codec.org/；版本 1.6.1；版权属于 Opus 的各原作者。
+
+应用静态链接本地编译的 libopus。完整原始源码及原有声明见 `Vendor/Opus/opus-1.6.1.tar.gz`，构建方法见 `scripts/build-opus.sh`。未修改上游源码。版权、免责声明和专利相关说明保留于 `Assets/Licenses/Opus-COPYING` 及源码归档。许可说明：https://opus-codec.org/license/ 。
+
+## SiriRemoteForge
+
+来源：https://github.com/HOLODATA-COM/SiriRemoteForge
+研究版本：`4c65969c71c5`；版权属于该项目贡献者；GPL-3.0-or-later。
+
+Apple 蓝牙包到 Opus 音频的处理流程、首次启用方式参考该项目。遥伴实现自己的设备筛选、包重组、限时采集、本地服务及虚拟声卡接入。上游 GPL 文本保留于 `Assets/Licenses/SiriRemoteForge-GPL-3.0`；本项目相关实现源码随版本提供。未分发其完整应用或安装包。
+
+## Apple 工具与项目图形
+
+PacketLogger 是 Apple 专有工具，不包含在遥伴安装包或源码归档中。需要 Apple 遥控器语音的用户自行从 Apple 官方渠道获取；安装程序验证已有工具，没有该工具也允许安装。系统框架和开发工具由 macOS / Apple 提供。
+
+0.10.8 不再包含小米官方产品照片。界面小型遥控器示意图由本项目通过图片生成工具制作，品牌图形为本项目生成素材。Apple、小米、豆包、OpenAI 等商标不因本项目开源而授予任何商标权利。

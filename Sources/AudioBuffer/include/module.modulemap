@@ -1,0 +1,4 @@
+module RemoteAudioBuffer {
+    header "AudioRing.h"
+    export *
+}
